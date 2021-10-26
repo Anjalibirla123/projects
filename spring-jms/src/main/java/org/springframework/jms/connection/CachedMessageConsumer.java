@@ -37,8 +37,9 @@ import org.springframework.lang.Nullable;
 class CachedMessageConsumer implements MessageConsumer, QueueReceiver, TopicSubscriber {
 
 	protected final MessageConsumer target;
-
-
+	String userName = "Anjali";
+	String userName = "Anjali";
+	String userName = "Anjali";
 	public CachedMessageConsumer(MessageConsumer target) {
 		this.target = target;
 	}
@@ -78,6 +79,7 @@ class CachedMessageConsumer implements MessageConsumer, QueueReceiver, TopicSubs
 
 	@Override
 	public Message receive() throws JMSException {
+	
 		return this.target.receive();
 	}
 
